@@ -1,0 +1,26 @@
+{{template config_path="design/email/header_template"}}
+
+<!--@subject {{trans "%subject" subject=$subject}}  @-->
+<table>
+    <tr>{{trans "There are %data_count error(s) cron job" data_count=$data_count "}}</tr>
+
+    <tr>
+        &nbsp;
+    </tr>
+
+    <tr>
+        <td>
+            <b>Schedule ID</b>
+        </td>
+        <td>
+            <b>Job Code</b>
+        </td>
+        <td>
+            <b>Status Message</b>
+        </td>
+    </tr>
+    {{var job_msg | raw}}
+
+</table>
+
+{{template config_path="design/email/footer_template"}} 
